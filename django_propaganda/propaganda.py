@@ -77,6 +77,7 @@ class Subscription(object):
         if not self._running:
             self._running = True
             self._thread = Thread(target=self._consume)
+            self._thread.daemon = True
             self._thread.start()
 
     def stop(self):
@@ -171,6 +172,12 @@ class Propaganda(object):
         self._key_prefix = key_prefix
         self._payload = {}
         self._subscriptions = {}
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.connection.release()
 
     @property
     def connection(self):
