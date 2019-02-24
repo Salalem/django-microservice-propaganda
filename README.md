@@ -13,7 +13,7 @@ Give Propaganda a topic exchange name and it provides a nice interface for pub/s
 ## Installation
 
 ```
-pip install django-propaganda
+pip install django-microservice-propaganda
 ```
 
 ## Creating Propaganda Object

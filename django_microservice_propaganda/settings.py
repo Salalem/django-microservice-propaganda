@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_propaganda.urls'
+ROOT_URLCONF = 'django_microservice_propaganda.urls'
 
 TEMPLATES = [
     {
