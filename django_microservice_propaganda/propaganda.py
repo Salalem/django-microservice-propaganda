@@ -169,6 +169,8 @@ class Propaganda(object):
 
         self._connection = Connection(broker_url)
         self._exchange = Exchange(exchange_name, type="topic", channel=self._connection)
+        self._exchange.declare()
+
         self._key_prefix = key_prefix
         self._payload = {}
         self._subscriptions = {}
