@@ -18,7 +18,7 @@ setup(
     url='https://www.salalem.com/',
     author='Firas Kafri',
     author_email='firas@salalem.com',
-    install_requires=['kombu'],
+    install_requires=['kombu<5.0,>=4.4.0'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
